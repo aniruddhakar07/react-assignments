@@ -1,0 +1,64 @@
+:root {
+  --night: #0b1229;
+  --dusk: #1e2a5e;
+  --sky-top: #2c4b8f;
+  --sky-bottom: #6f9ce8;
+  --glass: rgba(255, 255, 255, 0.08);
+  --glass-border: rgba(255, 255, 255, 0.16);
+  --text-primary: #f4f7ff;
+  --text-secondary: #b9c4e6;
+  --sun: #f5b942;
+  --sun-glow: rgba(245, 185, 66, 0.55);
+  --cyan: #7dd8e8;
+  --storm: #b98aff;
+  --danger: #ff8a80;
+
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-primary);
+  background-color: var(--sky-top);
+  background-image:
+    radial-gradient(circle at 20% -10%, rgba(245, 185, 66, 0.12), transparent 45%),
+    linear-gradient(180deg, var(--night) 0%, var(--dusk) 45%, var(--sky-top) 100%);
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100% 100vh, 100% 100vh;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+button {
+  font-family: inherit;
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
