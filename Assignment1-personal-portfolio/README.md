@@ -2,7 +2,7 @@
 
 React Environment Setup and Personal Portfolio, built with Vite + React (JSX only, external CSS).
 
-## Components (7 total — minimum 6 required)
+## Components (7 total)
 
 1. `Navbar` — sticky nav bar with a mobile hamburger toggle (uses `useState`)
 2. `Header` — hero section (acts as the page header)
