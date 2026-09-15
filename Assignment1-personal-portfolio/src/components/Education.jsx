@@ -1,3 +1,5 @@
+import SectionHeading from './SectionHeading.jsx'
+
 const EDUCATION = [
   {
     years: '2023 — 2027',
@@ -23,10 +25,7 @@ function Education() {
   return (
     <section id="education">
       <div className="wrap">
-        <div className="section-heading">
-          <span className="index">02</span>
-          <h2>Education</h2>
-        </div>
+        <SectionHeading index="02" title="Education" />
 
         <div className="timeline">
           {EDUCATION.map((item) => (

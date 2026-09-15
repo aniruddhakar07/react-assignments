@@ -1,0 +1,49 @@
+:root {
+  /* Color */
+  --color-bg: #faf9f6;
+  --color-surface: #ffffff;
+  --color-ink: #14121f;
+  --color-ink-muted: #625f72;
+  --color-primary: #6c4dff;
+  --color-primary-dark: #4f31e0;
+  --color-lime: #c8ff4d;
+  --color-coral: #ff5a36;
+  --color-yellow: #ffc53d;
+  --color-line: #14121f;
+  --color-success: #1b7a43;
+  --color-success-bg: #e9f5ee;
+  --color-error: #d1332e;
+  --color-error-bg: #fceceb;
+
+  /* Type */
+  --font-display: 'Space Grotesk', 'Segoe UI', sans-serif;
+  --font-body: 'Inter', 'Segoe UI', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: var(--color-bg);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  margin: 0;
+}
+
+button {
+  font-family: var(--font-body);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}

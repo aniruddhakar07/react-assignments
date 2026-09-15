@@ -6,7 +6,7 @@
 
 const CLOUD = 'M13 33c-4.4 0-8-3.6-8-8 0-4 3-7.3 6.8-7.9C13 12.6 17.4 9.5 22.5 9.5c6 0 10.9 4.4 11.7 10.1 4.4.5 7.8 4.3 7.8 8.9 0 4.7-3.8 8.5-8.5 8.5H13z'
 
-function Sun({ cx = 24, cy = 18, r = 7, color = 'var(--sun)' }) {
+function Sun({ cx = 24, cy = 18, r = 7, color = 'var(--sun, #f5b942)', glow = false }) {
   const rays = []
   for (let i = 0; i < 8; i++) {
     const angle = (i * Math.PI) / 4
@@ -14,32 +14,42 @@ function Sun({ cx = 24, cy = 18, r = 7, color = 'var(--sun)' }) {
     const y1 = cy + Math.sin(angle) * (r + 3)
     const x2 = cx + Math.cos(angle) * (r + 7)
     const y2 = cy + Math.sin(angle) * (r + 7)
-    rays.push(<line key={i} x1={x1} y1={y1} x2={x2} y2={y2} stroke={color} strokeWidth="2" strokeLinecap="round" />)
+    rays.push(<line key={i} x1={x1} y1={y1} x2={x2} y2={y2} stroke={color} strokeWidth="2.5" strokeLinecap="round" />)
   }
   return (
     <g>
+      {glow && <circle cx={cx} cy={cy} r={r + 9} fill={color} opacity="0.16" />}
       {rays}
       <circle cx={cx} cy={cy} r={r} fill={color} />
     </g>
   )
 }
 
-function Moon({ cx = 24, cy = 18, r = 7, color = 'var(--cyan)' }) {
-  return (
-    <path
-      d={`M${cx + r} ${cy - r}
-          a${r} ${r} 0 1 0 0 ${r * 2}
-          a${r * 0.72} ${r * 0.72} 0 0 1 0 -${r * 2}z`}
-      fill={color}
-    />
-  )
+function circlePath(cx, cy, r) {
+  return `M ${cx - r} ${cy} a ${r} ${r} 0 1 0 ${r * 2} 0 a ${r} ${r} 0 1 0 ${-r * 2} 0 Z`
 }
 
-function Cloud({ fill = 'var(--text-primary)', opacity = 0.9, translateY = 6 }) {
+function Moon({ cx = 24, cy = 18, r = 7, color = 'var(--cyan, #7dd8e8)' }) {
+  // A crescent made from two full circles combined with the evenodd
+  // fill rule (outer circle minus an offset inner circle). The inner
+  // circle's offset + radius must stay within the outer radius, or the
+  // part of it that pokes outside the outer boundary also gets painted
+  // (evenodd fills any region crossed an odd number of times, so a
+  // sliver poking outside the outer circle is "inside inner only" —
+  // one crossing — and renders as a second, disconnected blob).
+  const offsetX = r * 0.35
+  const offsetY = -r * 0.15
+  const innerR = r * 0.6
+  const outer = circlePath(cx, cy, r)
+  const inner = circlePath(cx + offsetX, cy + offsetY, innerR)
+  return <path d={`${outer} ${inner}`} fill={color} fillRule="evenodd" />
+}
+
+function Cloud({ fill = 'var(--text-primary, #f4f7ff)', opacity = 0.9, translateY = 6 }) {
   return <path d={CLOUD} fill={fill} opacity={opacity} transform={`translate(0, ${translateY})`} />
 }
 
-function RainDrops({ y = 36, color = 'var(--cyan)', count = 3, heavy = false }) {
+function RainDrops({ y = 36, color = 'var(--cyan, #7dd8e8)', count = 3, heavy = false }) {
   const xs = count === 3 ? [15, 24, 33] : [15, 33]
   return (
     <g>
@@ -60,7 +70,7 @@ function RainDrops({ y = 36, color = 'var(--cyan)', count = 3, heavy = false }) 
 }
 
 function Bolt() {
-  return <path d="M25 33l-7 9h5l-3 7 9-10h-5l3-6z" fill="var(--sun)" />
+  return <path d="M25 33l-7 9h5l-3 7 9-10h-5l3-6z" fill="var(--sun, #f5b942)" />
 }
 
 function SnowFlakes({ y = 37 }) {
@@ -68,7 +78,7 @@ function SnowFlakes({ y = 37 }) {
   return (
     <g>
       {xs.map((x, i) => (
-        <g key={i} stroke="var(--cyan)" strokeWidth="2" strokeLinecap="round">
+        <g key={i} stroke="var(--cyan, #7dd8e8)" strokeWidth="2" strokeLinecap="round">
           <line x1={x} y1={y - 3} x2={x} y2={y + 3} />
           <line x1={x - 2.6} y1={y - 1.5} x2={x + 2.6} y2={y + 1.5} />
           <line x1={x - 2.6} y1={y + 1.5} x2={x + 2.6} y2={y - 1.5} />
@@ -81,7 +91,7 @@ function SnowFlakes({ y = 37 }) {
 function Mist() {
   const ys = [16, 24, 32, 40]
   return (
-    <g stroke="var(--text-secondary)" strokeWidth="2.5" strokeLinecap="round">
+    <g stroke="var(--text-secondary, #b9c4e6)" strokeWidth="2.5" strokeLinecap="round">
       {ys.map((y, i) => (
         <line key={i} x1={i % 2 === 0 ? 8 : 12} y1={y} x2={i % 2 === 0 ? 40 : 36} y2={y} />
       ))}
@@ -95,7 +105,7 @@ function glyphFor(code) {
 
   switch (group) {
     case '01': // clear sky
-      return isDay ? <Sun cx={24} cy={24} r={10} /> : <Moon cx={24} cy={24} r={10} />
+      return isDay ? <Sun cx={24} cy={24} r={10} glow /> : <Moon cx={24} cy={24} r={10} />
 
     case '02': // few clouds
       return (

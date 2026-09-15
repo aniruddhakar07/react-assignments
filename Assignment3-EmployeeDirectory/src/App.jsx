@@ -105,7 +105,7 @@ function EmployeeForm({ formData, onChange, onSubmit, onCancel, isEditing, error
           />
         </Field>
 
-        <Field label="Department">
+        <Field label="Department Name">
           <select name="department" value={formData.department} onChange={handleFieldChange}>
             {DEPARTMENTS.map((dept) => (
               <option key={dept} value={dept}>

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { overallCgpa, isRollNumberTaken, isValidRollNumber, ROLL_NUMBER_LENGTH } from '../utils.js'
+import { overallCgpa, isRollNumberTaken, isValidRollNumber, ROLL_NUMBER_LENGTH, currentSemesterLabel } from '../utils.js'
 
 function getInitials(name) {
   return name
@@ -67,6 +67,7 @@ function StudentCard({
   existingStudents,
 }) {
   const cgpa = overallCgpa(semesters)
+  const semesterLabel = currentSemesterLabel(semesters)
   const [editingDetails, setEditingDetails] = useState(false)
   const [draft, setDraft] = useState({ name, rollNumber, department })
   const [detailsError, setDetailsError] = useState('')
@@ -178,6 +179,10 @@ function StudentCard({
             <div className="card-field">
               <span className="k">Department</span>
               <span className="v">{department}</span>
+            </div>
+            <div className="card-field">
+              <span className="k">Semester</span>
+              <span className="v">{semesterLabel ?? 'Not yet recorded'}</span>
             </div>
           </div>
         </>

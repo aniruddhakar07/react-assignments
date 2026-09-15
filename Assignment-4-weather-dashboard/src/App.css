@@ -171,6 +171,30 @@
 }
 
 /* ---------- Loading skeleton ---------- */
+.spinner-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 3px solid var(--glass-border);
+  border-top-color: var(--sun);
+  animation: spin 0.9s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -372,6 +396,12 @@
   background: rgba(245, 185, 66, 0.15);
   color: var(--sun);
   border-color: rgba(245, 185, 66, 0.4);
+}
+
+.condition-clear-night {
+  background: rgba(125, 216, 232, 0.15);
+  color: var(--cyan);
+  border-color: rgba(125, 216, 232, 0.4);
 }
 
 .condition-clouds {

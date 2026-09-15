@@ -30,8 +30,8 @@ A React weather dashboard built with Vite, using the OpenWeatherMap API.
 - Hourly forecast strip: a scrollable near-term view (next ~24 hours in
   OWM's free 3-hour steps) between the hero card and the 5-day forecast
 - 5-day forecast strip (high/low, icon, weekday + actual date per day)
-- Layout-matching loading skeleton (shimmering placeholder cards) while
-  a request is in flight, instead of a plain spinner
+- A visible loading spinner paired with a layout-matching skeleton
+  (shimmering placeholder cards) while a request is in flight
 - Error handling for unresolved locations, bad API keys, and network failures
 - Remembers your API key, unit preference, and last-searched location in
   `localStorage`

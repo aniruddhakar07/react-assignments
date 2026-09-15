@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import SectionHeading from './SectionHeading.jsx'
 
 const INITIAL_FORM = { name: '', email: '', message: '' }
 
@@ -24,10 +25,7 @@ function Contact() {
   return (
     <section id="contact">
       <div className="wrap">
-        <div className="section-heading">
-          <span className="index">04</span>
-          <h2>Contact</h2>
-        </div>
+        <SectionHeading index="04" title="Contact" />
 
         <div className="contact-panel">
           <div className="contact-info">

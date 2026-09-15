@@ -1,11 +1,10 @@
+import SectionHeading from './SectionHeading.jsx'
+
 function AboutMe() {
   return (
     <section id="about">
       <div className="wrap">
-        <div className="section-heading">
-          <span className="index">01</span>
-          <h2>About Me</h2>
-        </div>
+        <SectionHeading index="01" title="About Me" />
 
         <div className="about-text about-text--full">
           <p>

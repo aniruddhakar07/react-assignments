@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { overallCgpa, isRollNumberTaken, isValidRollNumber, ROLL_NUMBER_LENGTH, TOTAL_SEMESTERS } from '../utils.js'
+import { overallCgpa, isRollNumberTaken, isValidRollNumber, ROLL_NUMBER_LENGTH, TOTAL_SEMESTERS, currentSemesterLabel } from '../utils.js'
 
 function getInitials(name) {
   return name
@@ -14,6 +14,7 @@ function StudentTableRow({ student, existingStudents, onDelete, onUpdateDetails 
   const { name, rollNumber, department, semesters } = student
   const cgpa = overallCgpa(semesters)
   const filledCount = semesters.filter((v) => v !== null && v !== undefined).length
+  const semesterLabel = currentSemesterLabel(semesters)
 
   const [editing, setEditing] = useState(false)
   const [draft, setDraft] = useState({ name, rollNumber, department })
@@ -61,7 +62,7 @@ function StudentTableRow({ student, existingStudents, onDelete, onUpdateDetails 
   if (editing) {
     return (
       <tr className="editing-row">
-        <td colSpan={6}>
+        <td colSpan={7}>
           <div className="row-edit-form">
             <input
               value={draft.name}
@@ -99,6 +100,7 @@ function StudentTableRow({ student, existingStudents, onDelete, onUpdateDetails 
       </td>
       <td className="cell-mono">{rollNumber}</td>
       <td>{department}</td>
+      <td>{semesterLabel ?? '—'}</td>
       <td className="cell-mono">{filledCount}/{TOTAL_SEMESTERS}</td>
       <td className="cell-cgpa">{cgpa !== null ? cgpa.toFixed(2) : '—'}</td>
       <td className="cell-actions">
@@ -122,7 +124,8 @@ function StudentTable({ students, allStudents, onDelete, onUpdateDetails }) {
             <th>Name</th>
             <th>Roll Number</th>
             <th>Department</th>
-            <th>Semesters</th>
+            <th>Semester</th>
+            <th>Progress</th>
             <th>CGPA</th>
             <th>Actions</th>
           </tr>

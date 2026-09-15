@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" fill="#12161d"/>
+  <rect x="1" y="1" width="30" height="30" fill="none" stroke="#2b3340" stroke-width="1"/>
+  <path d="M2 2 L6 2 M2 2 L2 6" stroke="#e0a63c" stroke-width="1.5" fill="none"/>
+  <path d="M30 30 L26 30 M30 30 L30 26" stroke="#e0a63c" stroke-width="1.5" fill="none"/>
+  <text x="16" y="21" font-family="'IBM Plex Mono', monospace" font-size="13" font-weight="600" fill="#f5f1e6" text-anchor="middle">AK</text>
+</svg>

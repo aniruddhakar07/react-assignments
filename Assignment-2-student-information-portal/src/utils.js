@@ -26,3 +26,17 @@ const ROLL_NUMBER_PATTERN = /^\d{12}$/
 export function isValidRollNumber(rollNumber) {
   return ROLL_NUMBER_PATTERN.test(rollNumber.trim())
 }
+
+const ORDINALS = ['1st', '2nd', '3rd', '4th', '5th', '6th', '7th', '8th']
+
+// The "current" semester is inferred as the highest-numbered semester that
+// has a CGPA entered — i.e. the most recent one with actual data. Returns
+// null if no semesters have been filled in yet.
+export function currentSemesterLabel(semesters) {
+  let lastFilledIndex = -1
+  semesters.forEach((v, i) => {
+    if (v !== null && v !== undefined) lastFilledIndex = i
+  })
+  if (lastFilledIndex === -1) return null
+  return ORDINALS[lastFilledIndex] ?? `${lastFilledIndex + 1}th`
+}

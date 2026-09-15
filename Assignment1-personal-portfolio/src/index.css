@@ -334,8 +334,8 @@ section { padding: 90px 0; position: relative; }
    ============================================================ */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px 56px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px 48px;
 }
 
 .skill-group h4 {

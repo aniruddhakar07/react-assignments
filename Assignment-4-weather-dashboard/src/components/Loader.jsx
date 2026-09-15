@@ -1,10 +1,14 @@
-// A skeleton that mirrors the shape of the real result (hero card, stats
-// grid, hourly row, forecast row) so the layout doesn't jump once data
-// arrives, and it reads as "content is coming" rather than a blank pause.
+// A visible spinner (satisfying the assignment's explicit "Loading
+// Spinner" requirement) paired with a skeleton that mirrors the shape
+// of the real result — so it's unambiguous that this IS a loading
+// spinner, while the layout still doesn't jump once data arrives.
 export default function Loader() {
   return (
     <div className="skeleton" role="status" aria-live="polite">
-      <span className="visually-hidden">Loading weather…</span>
+      <div className="spinner-row">
+        <div className="spinner" />
+        <span>Fetching the forecast…</span>
+      </div>
 
       <div className="skeleton-card skeleton-hero">
         <div className="skeleton-line skeleton-w-40" />

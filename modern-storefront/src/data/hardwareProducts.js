@@ -1,0 +1,1258 @@
+export const HARDWARE_PRODUCTS = [
+  // --- CPUS ---
+  {
+    id: 'cpu-7800x3d',
+    sku: 'AMD-100-100000910WOF',
+    brand: 'AMD',
+    name: 'Ryzen 7 7800X3D 8-Core Desktop Processor',
+    category: 'CPU',
+    priceINR: 40200,
+    priceUSD: 420,
+    stock: 14,
+    rating: 4.9,
+    reviewsCount: 128,
+    image: '/images/cpu-7800x3d.jpg',
+    description: 'Premier gaming processor engineered with 2nd gen 3D V-Cache packaging, 8 Zen 4 cores, and ultra-efficient 120W TDP.',
+    keySpecs: { Cores: '8C / 16T', Boost: '5.0 GHz', Cache: '96MB L3', Socket: 'AM5' },
+    specs: {
+      'Socket': 'AM5',
+      'Architecture': 'Zen 4',
+      'Base Clock': '4.2 GHz',
+      'Max Boost Clock': '5.0 GHz',
+      'L3 Cache': '96MB 3D V-Cache',
+      'TDP': '120W',
+      'PCIe Revision': 'PCIe 5.0'
+    }
+  },
+  {
+    id: 'cpu-14900k',
+    sku: 'INT-BX8071514900K',
+    brand: 'Intel',
+    name: 'Core i9-14900K 24-Core Unlocked Desktop Processor',
+    category: 'CPU',
+    priceINR: 53900,
+    priceUSD: 563,
+    stock: 8,
+    rating: 4.7,
+    reviewsCount: 94,
+    image: '/images/cpu-14900k.jpg',
+    description: 'Flagship Raptor Lake Refresh processor featuring 8 Performance-cores and 16 Efficient-cores reaching up to 6.0 GHz.',
+    keySpecs: { Cores: '24C / 32T', Boost: '6.0 GHz', Cache: '36MB Smart', Socket: 'LGA1700' },
+    specs: {
+      'Socket': 'LGA1700',
+      'Architecture': 'Raptor Lake Refresh',
+      'Max Turbo Frequency': '6.0 GHz',
+      'Total Cores': '24 (8P + 16E)',
+      'Intel Smart Cache': '36MB',
+      'Base Power': '125W',
+      'Turbo Power': '253W'
+    }
+  },
+  {
+    id: 'cpu-13600k',
+    sku: 'INT-BX8071513600K',
+    brand: 'Intel',
+    name: 'Core i5-13600K 14-Core Desktop Processor',
+    category: 'CPU',
+    priceINR: 26900,
+    priceUSD: 281,
+    stock: 24,
+    rating: 4.8,
+    reviewsCount: 210,
+    image: '/images/cpu-13600k.jpg',
+    description: 'Excellent value gaming CPU with 6 Performance-cores and 8 Efficient-cores for flawless multitasking and high FPS.',
+    keySpecs: { Cores: '14C / 20T', Boost: '5.1 GHz', Cache: '24MB Smart', Socket: 'LGA1700' },
+    specs: {
+      'Socket': 'LGA1700',
+      'Architecture': 'Raptor Lake',
+      'Max Turbo Frequency': '5.1 GHz',
+      'Total Cores': '14 (6P + 8E)',
+      'Intel Smart Cache': '24MB',
+      'Base Power': '125W',
+      'Turbo Power': '181W'
+    }
+  },
+
+  // --- GPUS ---
+  {
+    id: 'gpu-rtx4090',
+    sku: 'NV-900-1G136-2530-000',
+    brand: 'NVIDIA',
+    name: 'GeForce RTX 4090 Founders Edition 24GB',
+    category: 'GPU',
+    priceINR: 183000,
+    priceUSD: 1913,
+    stock: 4,
+    rating: 4.9,
+    reviewsCount: 76,
+    image: '/images/gpu-rtx4090.jpg',
+    description: 'The definitive gaming GPU powered by Ada Lovelace, featuring 24GB G6X memory, DLSS 3 frame generation, and 16,384 CUDA cores.',
+    keySpecs: { VRAM: '24GB G6X', Bus: '384-Bit', Cores: '16,384', Power: '450W' },
+    specs: {
+      'CUDA Cores': '16,384',
+      'Memory Size': '24GB GDDR6X',
+      'Memory Interface Width': '384-bit',
+      'Card Dimensions': '304mm x 137mm (3-Slot)',
+      'Recommended Power': '850W',
+      'Display Connectors': '3x DisplayPort 1.4a, 1x HDMI 2.1a'
+    }
+  },
+  {
+    id: 'gpu-rtx4070s',
+    sku: 'ASUS-DUAL-RTX4070S-O12G',
+    brand: 'ASUS',
+    name: 'Dual GeForce RTX 4070 Super EVO OC Edition 12GB',
+    category: 'GPU',
+    priceINR: 61900,
+    priceUSD: 647,
+    stock: 15,
+    rating: 4.8,
+    reviewsCount: 52,
+    image: '/images/gpu-rtx4070s.jpg',
+    description: 'Compact dual-fan 1440p high-refresh graphics card with Axial-tech fan design, 12GB GDDR6X memory, and auto-extreme manufacturing.',
+    keySpecs: { VRAM: '12GB G6X', Bus: '192-Bit', Boost: '2550 MHz', Power: '220W' },
+    specs: {
+      'CUDA Cores': '7,168',
+      'Engine Clock': 'OC mode: 2550 MHz',
+      'Memory Speed': '21 Gbps',
+      'Form Factor': '2.46 Slot',
+      'Recommended PSU': '750W',
+      'Power Connectors': '1x 16-pin'
+    }
+  },
+  {
+    id: 'gpu-rx7900xtx',
+    sku: 'SAP-11322-02-20G',
+    brand: 'Sapphire',
+    name: 'Nitro+ AMD Radeon RX 7900 XTX Vapor-X 24GB',
+    category: 'GPU',
+    priceINR: 98990,
+    priceUSD: 1035,
+    stock: 6,
+    rating: 4.7,
+    reviewsCount: 39,
+    image: '/images/gpu-rx7900xtx.jpg',
+    description: 'RDNA 3 chiplet graphics card with a dedicated vapor chamber, magnesium alloy structural frame, and 24GB of high-speed memory.',
+    keySpecs: { VRAM: '24GB GDDR6', Bus: '384-Bit', Boost: '2680 MHz', Power: '420W' },
+    specs: {
+      'Stream Processors': '6,144',
+      'Infinity Cache': '96MB',
+      'Memory Interface': '384-bit',
+      'Thermal Solution': 'Vapor-X Chamber with 3x Fans',
+      'Recommended PSU': '800W'
+    }
+  },
+
+  // --- MOTHERBOARDS ---
+  {
+    id: 'mb-z790-hero',
+    sku: 'ASUS-ROG-MAX-Z790-DH',
+    brand: 'ASUS',
+    name: 'ROG Maximus Z790 Dark Hero Motherboard',
+    category: 'Motherboard',
+    priceINR: 64500,
+    priceUSD: 674,
+    stock: 9,
+    rating: 4.9,
+    reviewsCount: 31,
+    image: '/images/mb-z790-hero.jpg',
+    description: 'High-end Intel Z790 ATX motherboard featuring 20+1+2 power stages, PCIe 5.0 slot, Wi-Fi 7, and onboard Thunderbolt 4.',
+    keySpecs: { Socket: 'LGA1700', VRM: '20+1+2', M2Slots: '5x M.2', Network: 'Wi-Fi 7 / 2.5G' },
+    specs: {
+      'Form Factor': 'ATX',
+      'Chipset': 'Intel Z790',
+      'Memory Support': '4x DIMM, up to DDR5 8000+(OC)',
+      'Storage': '1x PCIe 5.0 M.2 + 4x PCIe 4.0 M.2',
+      'Rear I/O': 'Dual Thunderbolt 4 Type-C, 6x USB 3.2 Gen 2'
+    }
+  },
+  {
+    id: 'mb-b650-tomahawk',
+    sku: 'MSI-MAG-B650-TOMA',
+    brand: 'MSI',
+    name: 'MAG B650 Tomahawk WiFi AM5 Gaming Board',
+    category: 'Motherboard',
+    priceINR: 21800,
+    priceUSD: 228,
+    stock: 22,
+    rating: 4.8,
+    reviewsCount: 110,
+    image: '/images/mb-b650-tomahawk.jpg',
+    description: 'Battle-tested AM5 motherboard with heavy plated extended heatsinks, 14+2+1 Duet Rail power system, and PCIe 4.0 M.2 shields.',
+    keySpecs: { Socket: 'AM5', VRM: '14+2+1', Audio: 'ALC4080', Network: 'Wi-Fi 6E' },
+    specs: {
+      'Form Factor': 'ATX',
+      'Chipset': 'AMD B650',
+      'Memory Support': 'DDR5 7600+(OC)',
+      'Expansion Slots': '1x PCIe 4.0 x16, 1x PCIe 4.0 x4',
+      'M.2 Slots': '3x M.2 PCIe 4.0'
+    }
+  },
+
+  // --- RAM ---
+  {
+    id: 'ram-corsair-titanium',
+    sku: 'CMP32GX5M2B6000C30',
+    brand: 'Corsair',
+    name: 'Dominator Titanium RGB DDR5 32GB (2x16GB) 6000MHz',
+    category: 'RAM',
+    priceINR: 16900,
+    priceUSD: 177,
+    stock: 20,
+    rating: 4.8,
+    reviewsCount: 47,
+    image: '/images/ram-corsair-titanium.jpg',
+    description: 'Forged aluminum heatspreaders with patented DHX cooling technology, 11 addressable RGB LEDs, and tight CL30 timings.',
+    keySpecs: { Speed: '6000 MT/s', Capacity: '32GB (2x16)', Latency: 'CL30-36-36-76', Voltage: '1.40V' },
+    specs: {
+      'Memory Type': 'DDR5',
+      'Package': '288-pin DIMM',
+      'Performance Profile': 'Intel XMP 3.0 & AMD EXPO',
+      'Heat Spreader': 'Anodized Aluminum with swappable top bar'
+    }
+  },
+  {
+    id: 'ram-gskill-trident',
+    sku: 'F5-6400J3239G16GX2-TZ5RK',
+    brand: 'G.Skill',
+    name: 'Trident Z5 RGB Series 32GB (2x16GB) DDR5 6400MHz',
+    category: 'RAM',
+    priceINR: 11800,
+    priceUSD: 123,
+    stock: 18,
+    rating: 4.7,
+    reviewsCount: 68,
+    image: '/images/ram-gskill-trident.jpg',
+    description: 'Hyper-speed DDR5 memory with brushed-aluminum strip inset, translucent light bar, and hand-screened ICs.',
+    keySpecs: { Speed: '6400 MT/s', Capacity: '32GB (2x16)', Latency: 'CL32-39-39-102', Voltage: '1.40V' },
+    specs: {
+      'Memory Type': 'DDR5',
+      'Tested Speed': '6400 MT/s',
+      'Tested Latency': '32-39-39-102',
+      'Warranty': 'Limited Lifetime'
+    }
+  },
+
+  // --- STORAGE ---
+  {
+    id: 'ssd-990pro-2tb',
+    sku: 'MZ-V9P2T0B/AM',
+    brand: 'Samsung',
+    name: '990 PRO NVMe M.2 SSD 2TB PCIe Gen 4',
+    category: 'Storage',
+    priceINR: 17800,
+    priceUSD: 186,
+    stock: 25,
+    rating: 4.9,
+    reviewsCount: 145,
+    image: '/images/ssd-990pro-2tb.jpg',
+    description: 'Ultra-fast read/write speeds up to 7,450/6,900 MB/s utilizing in-house Pascal controller and nickel-coated thermal spreader.',
+    keySpecs: { Read: '7,450 MB/s', Write: '6,900 MB/s', Form: 'M.2 2280', TBW: '1,200 TBW' },
+    specs: {
+      'Interface': 'PCIe Gen 4.0 x4, NVMe 2.0',
+      'NAND Type': 'Samsung V-NAND 3-bit TLC',
+      'Cache Memory': '2GB Low Power DDR4 SDRAM',
+      'Mean Time Between Failures': '1.5 Million Hours'
+    }
+  },
+  {
+    id: 'ssd-t700-gen5',
+    sku: 'CT2000T700SSD3',
+    brand: 'Crucial',
+    name: 'T700 PCIe Gen5 NVMe M.2 SSD 2TB (with Heatsink)',
+    category: 'Storage',
+    priceINR: 27500,
+    priceUSD: 287,
+    stock: 11,
+    rating: 4.8,
+    reviewsCount: 33,
+    image: '/images/ssd-t700-gen5.jpg',
+    description: 'Next-generation PCIe 5.0 speeds pushing up to 12,400 MB/s read with a premium copper and aluminum heatsink.',
+    keySpecs: { Read: '12,400 MB/s', Write: '11,800 MB/s', Form: 'M.2 2280', Bus: 'PCIe Gen 5.0' },
+    specs: {
+      'Interface': 'PCIe 5.0 x4, NVMe 2.0',
+      'Controller': 'Phison PS5026-E26',
+      'Endurance': '1200 TBW',
+      'Hardware Encryption': 'AES 256-bit'
+    }
+  },
+
+  // --- COOLING ---
+  {
+    id: 'cool-kraken-360',
+    sku: 'RL-KN360-B1',
+    brand: 'NZXT',
+    name: 'Kraken Elite 360 RGB AIO Liquid CPU Cooler',
+    category: 'Cooling',
+    priceINR: 25900,
+    priceUSD: 271,
+    stock: 7,
+    rating: 4.8,
+    reviewsCount: 58,
+    image: '/images/cool-kraken-360.jpg',
+    description: 'High-performance closed-loop liquid cooler featuring a 2.36" wide-angle TFT-LCD pump screen and Asetek 7th-gen pump.',
+    keySpecs: { Radiator: '360mm', Display: '2.36in LCD (60Hz)', Fans: '3x 120mm RGB', Noise: '17.9 - 30.6 dBA' },
+    specs: {
+      'Pump Speed': '800 - 2,800 ± 300 RPM',
+      'Radiator Material': 'Aluminum',
+      'Tube Length': '400mm Braided Nylon',
+      'Compatible Sockets': 'Intel LGA1700/1200, AMD AM5/AM4'
+    }
+  },
+  {
+    id: 'cool-nh-d15',
+    sku: 'NH-D15-CH-BK',
+    brand: 'Noctua',
+    name: 'NH-D15 chromax.black Dual-Tower Air Cooler',
+    category: 'Cooling',
+    priceINR: 10800,
+    priceUSD: 113,
+    stock: 16,
+    rating: 4.9,
+    reviewsCount: 182,
+    image: '/images/cool-nh-d15.jpg',
+    description: 'Legendary flagship quiet dual-tower CPU heatsink fitted with two NF-A15 140mm PWM fans in an all-black ceramic coated finish.',
+    keySpecs: { Design: 'Dual-Tower', Fans: '2x 140mm', Pipes: '6 Heatpipes', Acoustical: '24.6 dB(A)' },
+    specs: {
+      'Fan Speed': '300 - 1500 RPM',
+      'Airflow': '140.2 m³/h',
+      'Material': 'Copper base & heatpipes, aluminum fins',
+      'Height': '165 mm'
+    }
+  },
+
+  // --- CASES ---
+  {
+    id: 'case-h9-flow',
+    sku: 'CM-H91FB-01',
+    brand: 'NZXT',
+    name: 'H9 Flow Dual-Chamber ATX Mid Tower Case',
+    category: 'Cases',
+    priceINR: 15800,
+    priceUSD: 165,
+    stock: 12,
+    rating: 4.9,
+    reviewsCount: 104,
+    image: '/images/case-h9-flow.jpg',
+    description: 'Stunning dual-chamber mid-tower case showcasing a seamless glass panel and high-airflow perforated top panel.',
+    keySpecs: { Form: 'Mid Tower', Motherboard: 'ATX/mATX', Radiator: 'Up to 360mm', Material: 'Steel & Glass' },
+    specs: {
+      'Dimensions': '495mm x 290mm x 466mm',
+      'Weight': '12.1 kg',
+      'Max GPU Length': '435mm',
+      'Fans Included': '4x 120mm F Series Quiet Airflow'
+    }
+  },
+  {
+    id: 'case-o11-dynamic',
+    sku: 'O11DEW',
+    brand: 'Lian Li',
+    name: 'O11 Dynamic EVO Mid-Tower Case',
+    category: 'Cases',
+    priceINR: 13800,
+    priceUSD: 144,
+    stock: 25,
+    rating: 4.8,
+    reviewsCount: 220,
+    image: '/images/case-o11-dynamic.jpg',
+    description: 'Reversible chassis with unparalleled modularity, capable of normal or reverse modes with immense cooling capacity.',
+    keySpecs: { Form: 'Mid Tower', Motherboard: 'E-ATX', Radiator: 'Dual 360mm', Orientation: 'Reversible' },
+    specs: {
+      'Dimensions': '465mm x 285mm x 459mm',
+      'Materials': 'Aluminum, Steel, Tempered Glass',
+      'Max CPU Cooler Height': '167mm',
+      'Max GPU Length': '422mm'
+    }
+  },
+
+  // --- POWER SUPPLIES ---
+  {
+    id: 'psu-rm1000x',
+    sku: 'CP-9020201-NA',
+    brand: 'Corsair',
+    name: 'RM1000x 1000W 80 Plus Gold Fully Modular ATX PSU',
+    category: 'Power Supplies',
+    priceINR: 16500,
+    priceUSD: 172,
+    stock: 30,
+    rating: 4.8,
+    reviewsCount: 312,
+    image: '/images/psu-rm1000x.jpg',
+    description: 'Ultra-reliable 1000W fully modular power supply built with 105°C-rated Japanese capacitors and a magnetic levitation fan.',
+    keySpecs: { Wattage: '1000W', Efficiency: '80+ Gold', Modular: 'Fully', Form: 'ATX' },
+    specs: {
+      'Continuous Power': '1000 Watts',
+      'Fan Size': '135mm',
+      'MTBF': '100,000 hours',
+      'Connectors': '1x ATX, 3x EPS, 6x PCIe'
+    }
+  },
+
+  // --- PERIPHERALS & MONITORS ---
+  {
+    id: 'mon-rog-oled',
+    sku: 'PG27AQDM',
+    brand: 'ASUS',
+    name: 'ROG Swift OLED PG27AQDM 27" 240Hz Gaming Monitor',
+    category: 'Peripherals',
+    priceINR: 84999,
+    priceUSD: 888,
+    stock: 5,
+    rating: 4.9,
+    reviewsCount: 64,
+    image: '/images/mon-rog-oled.jpg',
+    description: '27-inch 1440p OLED gaming panel running at 240Hz with 0.03ms response time, custom heatsink, and 99% DCI-P3 color gamut.',
+    keySpecs: { Panel: '27-inch OLED', Refresh: '240Hz', Response: '0.03ms (GtG)', Res: '2560 x 1440' },
+    specs: {
+      'Resolution': 'QHD (2560 x 1440)',
+      'Peak Brightness': '1000 nits (3% window)',
+      'HDR': 'HDR10',
+      'Connectivity': '1x DisplayPort 1.4, 2x HDMI 2.0, USB 3.2 Hub'
+    }
+  },
+  {
+    id: 'peri-logi-gpro2',
+    sku: '910-006796',
+    brand: 'Logitech',
+    name: 'G Pro X Superlight 2 Wireless Gaming Mouse',
+    category: 'Peripherals',
+    priceINR: 13495,
+    priceUSD: 141,
+    stock: 28,
+    rating: 4.8,
+    reviewsCount: 142,
+    image: '/images/peri-logi-gpro2.jpg',
+    description: 'Ultralight 60-gram competitive esports mouse armed with the HERO 2 sensor and LIGHTFORCE hybrid optical-mechanical switches.',
+    keySpecs: { Weight: '60 grams', Sensor: 'HERO 2', DPI: '32,000 DPI', Battery: '95 Hours' },
+    specs: {
+      'Max Acceleration': '>40G',
+      'Max Speed': '>500 IPS',
+      'Polling Rate': '2000Hz (0.5 ms)',
+      'Charging': 'USB-C / POWERPLAY Compatible'
+    }
+  },
+  {
+    id: 'peri-keychron-q1',
+    sku: 'Q1P-M1',
+    brand: 'Keychron',
+    name: 'Keychron Q1 Pro QMK/VIA Wireless Custom Keyboard',
+    category: 'Peripherals',
+    priceINR: 18500,
+    priceUSD: 193,
+    stock: 14,
+    rating: 4.8,
+    reviewsCount: 88,
+    image: '/images/peri-keychron-q1.jpg',
+    description: 'CNC machined 6063 aluminum mechanical keyboard featuring double-gasket dampening, hot-swappable PCB, and south-facing RGB.',
+    keySpecs: { Body: 'CNC Aluminum', Layout: '75%', Switches: 'K Pro Red', Connectivity: 'BT 5.1 / Type-C' },
+    specs: {
+      'Mounting Style': 'Double-Gasket Design',
+      'Keycaps': 'KSA Double-Shot PBT',
+      'Stabilizers': 'Screw-In PCB Stabilizers',
+      'Polling Rate': '1000Hz (Wired) / 90Hz (Wireless)'
+    }
+  },
+  // --- NEW ITEMS ADDED FOR REALISM ---
+  {
+    id: 'cpu-7600x',
+    sku: 'AMD-100-100000593WOF',
+    brand: 'AMD',
+    name: 'Ryzen 5 7600X 6-Core Desktop Processor',
+    category: 'CPU',
+    priceINR: 19800,
+    priceUSD: 207,
+    stock: 45,
+    rating: 4.8,
+    reviewsCount: 312,
+    image: '/images/cpu-7600x.jpg',
+    description: 'High-performance 6-core processor built on Zen 4 architecture, offering superb value for competitive gamers.',
+    keySpecs: { Cores: '6C / 12T', Boost: '5.3 GHz', Cache: '32MB L3', Socket: 'AM5' },
+    specs: {
+      'Socket': 'AM5',
+      'Architecture': 'Zen 4',
+      'Base Clock': '4.7 GHz',
+      'Max Boost Clock': '5.3 GHz',
+      'L3 Cache': '32MB',
+      'TDP': '105W'
+    }
+  },
+  {
+    id: 'cpu-14700k',
+    sku: 'INT-BX8071514700K',
+    brand: 'Intel',
+    name: 'Core i7-14700K 20-Core Desktop Processor',
+    category: 'CPU',
+    priceINR: 38500,
+    priceUSD: 402,
+    stock: 12,
+    rating: 4.8,
+    reviewsCount: 154,
+    image: '/images/cpu-14700k.jpg',
+    description: 'Powerful 20-core CPU combining 8 Performance and 12 Efficient cores for elite gaming and heavy multitasking.',
+    keySpecs: { Cores: '20C / 28T', Boost: '5.6 GHz', Cache: '33MB', Socket: 'LGA1700' },
+    specs: {
+      'Socket': 'LGA1700',
+      'Architecture': 'Raptor Lake Refresh',
+      'Max Turbo Frequency': '5.6 GHz',
+      'Total Cores': '20 (8P + 12E)',
+      'Base Power': '125W'
+    }
+  },
+  {
+    id: 'gpu-rtx4080s',
+    sku: 'NV-800-4080S-000',
+    brand: 'NVIDIA',
+    name: 'GeForce RTX 4080 Super Founders Edition 16GB',
+    category: 'GPU',
+    priceINR: 99990,
+    priceUSD: 1045,
+    stock: 8,
+    rating: 4.9,
+    reviewsCount: 88,
+    image: '/images/gpu-rtx4080s.jpg',
+    description: 'Supercharged performance for 4K gaming, featuring 16GB of VRAM and ultra-efficient Ada Lovelace architecture.',
+    keySpecs: { VRAM: '16GB G6X', Bus: '256-Bit', Cores: '10,240', Power: '320W' },
+    specs: {
+      'CUDA Cores': '10,240',
+      'Memory Size': '16GB GDDR6X',
+      'Recommended Power': '750W',
+      'Card Dimensions': '304mm x 137mm (3-Slot)'
+    }
+  },
+  {
+    id: 'gpu-rx7800xt',
+    sku: 'SAP-PULSE-7800XT',
+    brand: 'Sapphire',
+    name: 'Pulse AMD Radeon RX 7800 XT 16GB',
+    category: 'GPU',
+    priceINR: 49990,
+    priceUSD: 522,
+    stock: 22,
+    rating: 4.7,
+    reviewsCount: 165,
+    image: '/images/gpu-rx7800xt.jpg',
+    description: 'Exceptional 1440p gaming graphics card featuring RDNA 3 architecture, robust cooling, and 16GB of GDDR6 memory.',
+    keySpecs: { VRAM: '16GB GDDR6', Bus: '256-Bit', Boost: '2430 MHz', Power: '266W' },
+    specs: {
+      'Stream Processors': '3840',
+      'Infinity Cache': '64MB',
+      'Recommended PSU': '700W'
+    }
+  },
+  {
+    id: 'mb-b650m-mortar',
+    sku: 'MSI-MAG-B650M-MOR',
+    brand: 'MSI',
+    name: 'MAG B650M Mortar WiFi Micro-ATX',
+    category: 'Motherboard',
+    priceINR: 18900,
+    priceUSD: 198,
+    stock: 19,
+    rating: 4.8,
+    reviewsCount: 72,
+    image: '/images/mb-b650m-mortar.jpg',
+    description: 'Compact Micro-ATX board with robust 12+2+1 power phases, PCIe 4.0, and integrated Wi-Fi 6E.',
+    keySpecs: { Socket: 'AM5', Form: 'Micro-ATX', VRM: '12+2+1', Network: 'Wi-Fi 6E' },
+    specs: {
+      'Form Factor': 'Micro-ATX',
+      'Chipset': 'AMD B650',
+      'Memory Support': '4x DIMM, up to DDR5 7600+(OC)'
+    }
+  },
+  {
+    id: 'mb-z790-aorus',
+    sku: 'GIG-Z790-AORUS-ELITE',
+    brand: 'Gigabyte',
+    name: 'Z790 AORUS Elite AX ATX Motherboard',
+    category: 'Motherboard',
+    priceINR: 26800,
+    priceUSD: 280,
+    stock: 15,
+    rating: 4.6,
+    reviewsCount: 94,
+    image: '/images/mb-z790-aorus.jpg',
+    description: 'Premium Intel Z790 board featuring a twin 16+1+2 phase digital VRM, DDR5 compatibility, and advanced thermal design.',
+    keySpecs: { Socket: 'LGA1700', VRM: '16+1+2', M2Slots: '4x M.2', Network: 'Wi-Fi 6E' },
+    specs: {
+      'Form Factor': 'ATX',
+      'Chipset': 'Intel Z790',
+      'Memory Support': 'DDR5 7600(O.C.)'
+    }
+  },
+  {
+    id: 'ram-kingston-fury',
+    sku: 'KF560C36BBEAK2-32',
+    brand: 'Kingston',
+    name: 'FURY Beast 32GB (2x16GB) DDR5 6000MHz',
+    category: 'RAM',
+    priceINR: 9800,
+    priceUSD: 102,
+    stock: 40,
+    rating: 4.8,
+    reviewsCount: 215,
+    image: '/images/ram-kingston-fury.jpg',
+    description: 'High-speed DDR5 memory featuring aggressive styling, low-profile heat spreader, and plug-and-play functionality.',
+    keySpecs: { Speed: '6000 MT/s', Capacity: '32GB', Latency: 'CL36', Profile: 'EXPO/XMP' },
+    specs: {
+      'Memory Type': 'DDR5',
+      'Voltage': '1.35V',
+      'Heat Spreader': 'Low-profile Aluminum'
+    }
+  },
+  {
+    id: 'ssd-sn850x-2tb',
+    sku: 'WDS200T2X0E',
+    brand: 'Western Digital',
+    name: 'WD Black SN850X 2TB NVMe SSD',
+    category: 'Storage',
+    priceINR: 16200,
+    priceUSD: 169,
+    stock: 35,
+    rating: 4.9,
+    reviewsCount: 420,
+    image: '/images/ssd-sn850x-2tb.jpg',
+    description: 'Top-tier PCIe Gen4 storage delivering insane read speeds up to 7,300 MB/s for lightning-fast load times.',
+    keySpecs: { Read: '7,300 MB/s', Write: '6,600 MB/s', Form: 'M.2 2280', Bus: 'PCIe Gen4' },
+    specs: {
+      'Interface': 'PCIe Gen 4.0 x4',
+      'Endurance': '1200 TBW'
+    }
+  },
+  {
+    id: 'cool-ak620',
+    sku: 'R-AK620-BKNNMT-G',
+    brand: 'DeepCool',
+    name: 'AK620 High-Performance Dual Tower CPU Cooler',
+    category: 'Cooling',
+    priceINR: 5400,
+    priceUSD: 56,
+    stock: 50,
+    rating: 4.8,
+    reviewsCount: 280,
+    image: '/images/cool-ak620.jpg',
+    description: 'Massive dual-tower heatsink with six heatpipes and two fluid dynamic bearing fans providing up to 260W of heat dissipation.',
+    keySpecs: { Design: 'Dual-Tower', TDP: '260W', Fans: '2x 120mm', Noise: '≤28 dBA' },
+    specs: {
+      'Fan Speed': '500~1850 RPM',
+      'Height': '160mm',
+      'Socket Support': 'Intel 1700/1200/115X, AMD AM5/AM4'
+    }
+  },
+  {
+    id: 'cool-h150i',
+    sku: 'CW-9060051-WW',
+    brand: 'Corsair',
+    name: 'iCUE H150i Elite Capellix Liquid Cooler',
+    category: 'Cooling',
+    priceINR: 16200,
+    priceUSD: 169,
+    stock: 14,
+    rating: 4.7,
+    reviewsCount: 165,
+    image: '/images/cool-h150i.jpg',
+    description: 'Premium 360mm AIO cooler with ultra-bright Capellix RGB LEDs, three ML120 RGB PWM fans, and an included iCUE Commander CORE.',
+    keySpecs: { Radiator: '360mm', Fans: '3x 120mm ML RGB', Controller: 'Included', Software: 'iCUE' },
+    specs: {
+      'Pump': 'High-performance RGB Pump',
+      'Radiator Material': 'Aluminum'
+    }
+  },
+  {
+    id: 'case-fractal-north',
+    sku: 'FD-C-NOR1C-01',
+    brand: 'Fractal Design',
+    name: 'North Charcoal Black Mid Tower',
+    category: 'Cases',
+    priceINR: 14500,
+    priceUSD: 152,
+    stock: 10,
+    rating: 4.9,
+    reviewsCount: 195,
+    image: '/images/case-fractal-north.jpg',
+    description: 'An elegant PC case blending natural materials like real walnut wood with sleek steel construction for a sophisticated look.',
+    keySpecs: { Form: 'Mid Tower', Front: 'Real Wood', Side: 'Mesh/Glass', Fans: '2x 140mm' },
+    specs: {
+      'Dimensions': '447 x 215 x 469 mm',
+      'Max GPU Length': '355 mm'
+    }
+  },
+  {
+    id: 'case-4000d',
+    sku: 'CC-9011200-WW',
+    brand: 'Corsair',
+    name: '4000D Airflow Tempered Glass Mid-Tower',
+    category: 'Cases',
+    priceINR: 6990,
+    priceUSD: 73,
+    stock: 60,
+    rating: 4.8,
+    reviewsCount: 1540,
+    image: '/images/case-4000d.jpg',
+    description: 'Highly popular airflow-focused case featuring a high-airflow front panel, cable routing system, and two included AirGuide fans.',
+    keySpecs: { Form: 'Mid Tower', Panel: 'High-Airflow', Included: '2x 120mm Fans', Glass: 'Tinted' },
+    specs: {
+      'Dimensions': '453mm x 230mm x 466mm',
+      'Max GPU Length': '360mm'
+    }
+  },
+  {
+    id: 'psu-focus-850',
+    sku: 'FOCUS-GX-850',
+    brand: 'Seasonic',
+    name: 'FOCUS GX-850 850W 80+ Gold PSU',
+    category: 'Power Supplies',
+    priceINR: 12200,
+    priceUSD: 128,
+    stock: 25,
+    rating: 4.9,
+    reviewsCount: 412,
+    image: '/images/psu-focus-850.jpg',
+    description: 'Compact fully modular power supply boasting 80 PLUS Gold efficiency, hybrid silent fan control, and a 10-year warranty.',
+    keySpecs: { Wattage: '850W', Efficiency: '80+ Gold', Modular: 'Fully', Size: '140mm Depth' },
+    specs: {
+      'Form Factor': 'ATX',
+      'Warranty': '10 Years',
+      'Fan': '120mm FDB Fan'
+    }
+  },
+  {
+    id: 'peri-razer-dav3',
+    sku: 'RZ01-04630100-R3U1',
+    brand: 'Razer',
+    name: 'DeathAdder V3 Pro Wireless Ergonomic Mouse',
+    category: 'Peripherals',
+    priceINR: 12899,
+    priceUSD: 135,
+    stock: 18,
+    rating: 4.8,
+    reviewsCount: 230,
+    image: '/images/peri-razer-dav3.jpg',
+    description: 'Ultra-lightweight ergonomic mouse perfected for esports, featuring the Focus Pro 30K optical sensor and optical mouse switches.',
+    keySpecs: { Weight: '63g', Sensor: 'Focus Pro 30K', Switches: 'Optical Gen-3', Battery: '90 Hours' },
+    specs: {
+      'Max DPI': '30000',
+      'Polling Rate': 'Up to 4000Hz (with dongle)'
+    }
+  },
+  {
+    id: 'peri-wooting-60he',
+    sku: 'WOOTING-60HE',
+    brand: 'Wooting',
+    name: '60HE Analog Mechanical Keyboard',
+    category: 'Peripherals',
+    priceINR: 19500,
+    priceUSD: 204,
+    stock: 2,
+    rating: 5.0,
+    reviewsCount: 340,
+    image: '/images/peri-wooting-60he.jpg',
+    description: 'Revolutionary analog keyboard utilizing Lekker magnetic switches for rapid trigger, adjustable actuation point, and pure competitive advantage.',
+    keySpecs: { Layout: '60%', Switches: 'Magnetic Analog', Actuation: '0.1 to 4.0mm', Feature: 'Rapid Trigger' },
+    specs: {
+      'Switches': 'Lekker Linear60',
+      'Software': 'Wootility (Web-based)'
+    }
+  },
+  {
+    id: 'cpu-9800x3d',
+    sku: 'AMD-100-100001084WOF',
+    brand: 'AMD',
+    name: 'Ryzen 7 9800X3D 8-Core Desktop Processor',
+    category: 'CPU',
+    priceINR: 47999,
+    priceUSD: 502,
+    stock: 6,
+    rating: 5.0,
+    reviewsCount: 182,
+    image: '/images/cpu-9800x3d.jpg',
+    description: 'The pinnacle of desktop gaming CPUs featuring 2nd Generation 3D V-Cache architecture under the compute die for unmatched thermals, higher boost clocks, and record frame rates.',
+    keySpecs: { Cores: '8C / 16T', Boost: '5.2 GHz', Cache: '96MB L3', Socket: 'AM5' },
+    specs: {
+      'Socket': 'AM5',
+      'Architecture': 'Zen 5',
+      'Base Clock': '4.7 GHz',
+      'Max Boost Clock': '5.2 GHz',
+      'L3 Cache': '96MB 3D V-Cache',
+      'TDP': '120W',
+      'PCIe Revision': 'PCIe 5.0'
+    }
+  },
+  {
+    id: 'cpu-9950x',
+    sku: 'AMD-100-100001277WOF',
+    brand: 'AMD',
+    name: 'Ryzen 9 9950X 16-Core Flagship Processor',
+    category: 'CPU',
+    priceINR: 61500,
+    priceUSD: 643,
+    stock: 9,
+    rating: 4.9,
+    reviewsCount: 76,
+    image: '/images/cpu-9950x.jpg',
+    description: 'Ultra-enthusiast Zen 5 desktop processor delivering 16 full-speed cores and 32 threads for elite 3D rendering, simulation, and simultaneous 4K gaming and streaming.',
+    keySpecs: { Cores: '16C / 32T', Boost: '5.7 GHz', Cache: '80MB Total', Socket: 'AM5' },
+    specs: {
+      'Socket': 'AM5',
+      'Architecture': 'Zen 5',
+      'Base Clock': '4.3 GHz',
+      'Max Boost Clock': '5.7 GHz',
+      'L3 Cache': '64MB',
+      'TDP': '170W',
+      'PCIe Revision': 'PCIe 5.0'
+    }
+  },
+  {
+    id: 'gpu-rtx4060ti',
+    sku: 'NV-RTX4060TI-16G-OC',
+    brand: 'NVIDIA',
+    name: 'GeForce RTX 4060 Ti 16GB Dual OC Graphics Card',
+    category: 'GPU',
+    priceINR: 43900,
+    priceUSD: 459,
+    stock: 18,
+    rating: 4.7,
+    reviewsCount: 145,
+    image: '/images/gpu-rtx4060ti.jpg',
+    description: 'High-efficiency Ada Lovelace graphics card loaded with an expanded 16GB VRAM buffer, DLSS 3 Frame Generation, and ultra-quiet dual-fan cooling for 1080p and 1440p gaming.',
+    keySpecs: { VRAM: '16GB GDDR6', Boost: '2565 MHz', Power: '165W TDP', Bus: '128-bit' },
+    specs: {
+      'CUDA Cores': '4352',
+      'Memory Size': '16GB GDDR6',
+      'Memory Bus': '128-bit',
+      'Power Consumption': '165W',
+      'Outputs': '3x DisplayPort 1.4a, 1x HDMI 2.1a'
+    }
+  },
+  {
+    id: 'gpu-rx7700xt',
+    sku: 'AMD-RX7700XT-PULSE-12G',
+    brand: 'AMD',
+    name: 'Radeon RX 7700 XT Pulse 12GB Gaming GPU',
+    category: 'GPU',
+    priceINR: 39990,
+    priceUSD: 418,
+    stock: 15,
+    rating: 4.8,
+    reviewsCount: 110,
+    image: '/images/gpu-rx7700xt.jpg',
+    description: 'RDNA 3 gaming architecture with 12GB high-speed GDDR6 memory, dual ball bearing fans, and AV1 encode/decode for high frame rates in modern titles.',
+    keySpecs: { VRAM: '12GB GDDR6', Boost: '2544 MHz', Power: '245W TDP', Bus: '192-bit' },
+    specs: {
+      'Stream Processors': '3456',
+      'Memory Size': '12GB GDDR6',
+      'Memory Bus': '192-bit',
+      'Power Consumption': '245W',
+      'Outputs': '2x DisplayPort 2.1, 2x HDMI 2.1'
+    }
+  },
+  {
+    id: 'mb-x670e-hero',
+    sku: 'ASUS-ROG-X670E-HERO',
+    brand: 'ASUS',
+    name: 'ROG Crosshair X670E Hero Gaming Motherboard',
+    category: 'Motherboard',
+    priceINR: 65990,
+    priceUSD: 690,
+    stock: 7,
+    rating: 4.9,
+    reviewsCount: 62,
+    image: '/images/mb-x670e-hero.jpg',
+    description: 'Flagship AM5 motherboard featuring 18+2 teamed power stages, Polymo lighting on the I/O cover, PCIe 5.0 graphics slot, dual USB4 Type-C ports, and Wi-Fi 6E.',
+    keySpecs: { Socket: 'AM5', Chipset: 'AMD X670E', VRM: '18+2 Stages', PCIe: 'PCIe 5.0 x16' },
+    specs: {
+      'Socket': 'AM5',
+      'Chipset': 'AMD X670E',
+      'Form Factor': 'ATX',
+      'Memory Slots': '4x DDR5 (Up to 192GB, 8000+ MHz OC)',
+      'M.2 Slots': '5x M.2 (2x PCIe 5.0, 3x PCIe 4.0)',
+      'Networking': 'Intel 2.5Gb Ethernet, Wi-Fi 6E'
+    }
+  },
+  {
+    id: 'ram-vengeance-rgb',
+    sku: 'COR-CMH32GX5M2B6000C30',
+    brand: 'Corsair',
+    name: 'Vengeance RGB 32GB (2x16GB) DDR5-6000 CL30',
+    category: 'RAM',
+    priceINR: 10800,
+    priceUSD: 113,
+    stock: 22,
+    rating: 4.9,
+    reviewsCount: 290,
+    image: '/images/ram-vengeance-rgb.jpg',
+    description: 'Optimal low-latency DDR5 performance engineered for AMD and Intel platforms. Features ten individually addressable RGB LEDs per module with sleek aluminum heat spreaders.',
+    keySpecs: { Capacity: '32GB (2x16GB)', Speed: 'DDR5-6000', Timings: 'CL30-36-36-76', Voltage: '1.40V' },
+    specs: {
+      'Type': '288-Pin DDR5 SDRAM',
+      'Speed': 'DDR5 6000 (PC5 48000)',
+      'CAS Latency': '30',
+      'Profiles': 'AMD EXPO & Intel XMP 3.0'
+    }
+  },
+  {
+    id: 'ssd-990evo-1tb',
+    sku: 'SAM-MZ-V9E1T0B/AM',
+    brand: 'Samsung',
+    name: '990 EVO 1TB PCIe 4.0/5.0 NVMe M.2 SSD',
+    category: 'Storage',
+    priceINR: 7600,
+    priceUSD: 79,
+    stock: 25,
+    rating: 4.8,
+    reviewsCount: 165,
+    image: '/images/ssd-990evo-1tb.jpg',
+    description: 'Versatile mainstream NVMe storage with hybrid PCIe 4.0 x4 and PCIe 5.0 x2 support, achieving up to 5,000 MB/s sequential reads with 70% improved power efficiency.',
+    keySpecs: { Capacity: '1TB', Interface: 'PCIe 4.0/5.0', Read: '5,000 MB/s', Write: '4,200 MB/s' },
+    specs: {
+      'Form Factor': 'M.2 2280',
+      'Sequential Read': 'Up to 5,000 MB/s',
+      'Sequential Write': 'Up to 4,200 MB/s',
+      'TBW': '600 TBW'
+    }
+  },
+  {
+    id: 'cool-liquid-freezer',
+    sku: 'ARC-ACFRE00144A',
+    brand: 'ARCTIC',
+    name: 'Liquid Freezer III 360 A-RGB Liquid CPU Cooler',
+    category: 'Cooling',
+    priceINR: 11200,
+    priceUSD: 117,
+    stock: 14,
+    rating: 4.9,
+    reviewsCount: 312,
+    image: '/images/cool-liquid-freezer.jpg',
+    description: 'High-performance 360mm AIO liquid cooler with extra-thick 38mm radiator, custom in-house PWM pump, three P12 PWM A-RGB fans, and an active VRM fan on the water block.',
+    keySpecs: { Radiator: '360mm (38mm thick)', Fans: '3x 120mm A-RGB', Pump: 'Integrated VRM Fan', Sockets: 'AM5/AM4/LGA1700' },
+    specs: {
+      'Radiator Dimensions': '398 x 120 x 38 mm',
+      'Fan Speed': '200 - 2000 RPM',
+      'VRM Fan Speed': '400 - 2500 RPM',
+      'Warranty': '6 Years'
+    }
+  },
+  {
+    id: 'case-hyte-y70',
+    sku: 'HYTE-CS-HYTE-Y70-B',
+    brand: 'HYTE',
+    name: 'Y70 Touch Dual-Chamber Panoramic ATX Case',
+    category: 'Cases',
+    priceINR: 36500,
+    priceUSD: 381,
+    stock: 5,
+    rating: 5.0,
+    reviewsCount: 88,
+    image: '/images/case-hyte-y70.jpg',
+    description: 'Showstopping panoramic dual-chamber chassis equipped with an integrated 14.1-inch 4K 60Hz capacitive multi-touchscreen display for custom widgets, metrics, and video.',
+    keySpecs: { Display: '14.1" 4K 60Hz Touch', Layout: 'Dual Chamber', GPU: 'Vertical 4-Slot', Support: 'Up to 360mm AIO' },
+    specs: {
+      'Form Factor': 'Mid-Tower ATX',
+      'Dimensions': '470 x 320 x 470 mm',
+      'Radiator Support': 'Side: 360mm, Top: 360mm',
+      'Touchscreen Resolution': '1100 x 3840 (4K)'
+    }
+  },
+  {
+    id: 'case-h6-flow',
+    sku: 'NZXT-CC-H61FB-01',
+    brand: 'NZXT',
+    name: 'H6 Flow Compact Dual-Chamber ATX Case',
+    category: 'Cases',
+    priceINR: 10500,
+    priceUSD: 110,
+    stock: 16,
+    rating: 4.8,
+    reviewsCount: 154,
+    image: '/images/case-h6-flow.jpg',
+    description: 'Seamless glass front and side panels with a corner-angled intake holding three pre-installed 120mm fans for uninterrupted GPU cooling airflow.',
+    keySpecs: { Layout: 'Dual Chamber', Fans: '3x 120mm Included', Support: 'Up to 360mm Top', Style: 'Panoramic Glass' },
+    specs: {
+      'Dimensions': '435 x 287 x 415 mm',
+      'Motherboard Support': 'ATX, Micro-ATX, Mini-ITX',
+      'GPU Clearance': 'Up to 365 mm'
+    }
+  },
+  {
+    id: 'psu-sf750',
+    sku: 'COR-CP-9020186-NA',
+    brand: 'Corsair',
+    name: 'SF750 750W 80+ Platinum SFX Modular Power Supply',
+    category: 'Power Supplies',
+    priceINR: 15400,
+    priceUSD: 161,
+    stock: 10,
+    rating: 5.0,
+    reviewsCount: 420,
+    image: '/images/psu-sf750.jpg',
+    description: 'Gold-standard small form factor power supply delivering continuous 750 watts at 80 PLUS Platinum efficiency with individually sleeved cables and Zero RPM fan mode.',
+    keySpecs: { Wattage: '750W', Rating: '80+ Platinum', Size: 'SFX Form Factor', Modular: 'Fully Modular' },
+    specs: {
+      'Efficiency': '80 PLUS Platinum',
+      'Fan Size': '92mm Fluid Dynamic Bearing',
+      'Modularity': 'Full Modular (Individually Sleeved)',
+      'Dimensions': '100 x 125 x 63.5 mm'
+    }
+  },
+  {
+    id: 'mon-odyssey-g9',
+    sku: 'SAM-LS49AG952NNXZA',
+    brand: 'Samsung',
+    name: 'Odyssey Neo G9 49-inch Dual QHD Curved Gaming Monitor',
+    category: 'Peripherals',
+    priceINR: 124999,
+    priceUSD: 1306,
+    stock: 4,
+    rating: 4.9,
+    reviewsCount: 95,
+    image: '/images/mon-odyssey-g9.jpg',
+    description: 'Gigantic 49-inch 1000R curved ultra-wide display utilizing Quantum Mini-LED technology with 2,048 local dimming zones, 240Hz refresh rate, and 1ms response time.',
+    keySpecs: { Size: '49"', Res: '5120 x 1440', Refresh: '240Hz', Curve: '1000R Deep Curve' },
+    specs: {
+      'Screen Size': '49 Inch Curved (32:9)',
+      'Panel Type': 'Quantum Mini-LED VA',
+      'Resolution': '5120 x 1440 (Dual QHD)',
+      'Refresh Rate': '240Hz',
+      'Response Time': '1ms (GtG)',
+      'HDR': 'Quantum HDR 2000'
+    }
+  },
+  // --- REAL-WORLD COMPATIBLE ECOSYSTEMS ---
+  {
+    id: 'cpu-5700x3d',
+    sku: 'AMD-100-100001503WOF',
+    brand: 'AMD',
+    name: 'Ryzen 7 5700X3D 8-Core Desktop Processor',
+    category: 'CPU',
+    priceINR: 20900,
+    priceUSD: 218,
+    stock: 28,
+    rating: 4.9,
+    reviewsCount: 380,
+    image: '/images/cpu-5700x3d.jpg',
+    description: 'The legendary value gaming CPU for Socket AM4 platforms. Features 8 cores, 16 threads, and massive 96MB 3D V-Cache to breathe high-FPS life into budget systems.',
+    keySpecs: { Cores: '8C / 16T', Boost: '4.1 GHz', Cache: '96MB L3', Socket: 'AM4' },
+    specs: {
+      'Socket': 'AM4',
+      'Architecture': 'Zen 3',
+      'Base Clock': '3.0 GHz',
+      'Max Boost Clock': '4.1 GHz',
+      'L3 Cache': '96MB 3D V-Cache',
+      'TDP': '105W',
+      'Memory Support': 'DDR4-3200',
+      'PCIe Revision': 'PCIe 4.0'
+    }
+  },
+  {
+    id: 'mb-b550-tomahawk',
+    sku: 'MSI-MAG-B550-TOMAHAWK-MAX',
+    brand: 'MSI',
+    name: 'MAG B550 TOMAHAWK MAX WiFi Motherboard',
+    category: 'Motherboard',
+    priceINR: 14900,
+    priceUSD: 156,
+    stock: 22,
+    rating: 4.8,
+    reviewsCount: 512,
+    image: '/images/mb-b550-tomahawk.jpg',
+    description: 'Top-tier AM4 gaming motherboard boasting a robust 10+2+1 Duet Rail VRM, extended heatsink design, dual M.2 Shield Frozr, PCIe 4.0, and 2.5G LAN with Wi-Fi 6.',
+    keySpecs: { Socket: 'AM4', Memory: 'DDR4', Form: 'ATX', VRM: '10+2+1' },
+    specs: {
+      'Socket': 'AM4',
+      'Chipset': 'AMD B550',
+      'Form Factor': 'ATX',
+      'Memory Support': 'DDR4 up to 4400+(OC), 128GB',
+      'Memory Type': 'DDR4',
+      'PCIe Slot': '1x PCIe 4.0 x16, 1x PCIe 3.0 x16',
+      'M.2 Slots': '2x M.2 (1x Gen4, 1x Gen3)',
+      'Networking': 'Realtek 2.5G LAN + Wi-Fi 6'
+    }
+  },
+  {
+    id: 'ram-vengeance-ddr4',
+    sku: 'COR-CMK32GX4M2D3600C16',
+    brand: 'Corsair',
+    name: 'Vengeance LPX 32GB (2x16GB) DDR4-3600 CL16',
+    category: 'RAM',
+    priceINR: 6200,
+    priceUSD: 65,
+    stock: 45,
+    rating: 4.9,
+    reviewsCount: 620,
+    image: '/images/ram-vengeance-ddr4.jpg',
+    description: 'Low-profile pure aluminum heat spreaders designed for high-performance overclocking on DDR4 motherboards with tight cooler clearances and XMP 2.0 support.',
+    keySpecs: { Type: 'DDR4', Speed: '3600 MT/s', Capacity: '32GB (2x16GB)', Latency: 'CL16' },
+    specs: {
+      'Memory Type': 'DDR4',
+      'Capacity': '32GB (2x16GB)',
+      'Speed': 'DDR4 3600 (PC4-28800)',
+      'CAS Latency': '16',
+      'Voltage': '1.35V',
+      'Form Factor': 'Low-Profile 288-Pin DIMM'
+    }
+  },
+  {
+    id: 'cool-peerless-assassin',
+    sku: 'TR-PA120-SE-BK',
+    brand: 'Thermalright',
+    name: 'Peerless Assassin 120 SE Dual-Tower Cooler',
+    category: 'Cooling',
+    priceINR: 3650,
+    priceUSD: 38,
+    stock: 60,
+    rating: 5.0,
+    reviewsCount: 840,
+    image: '/images/cool-peerless-assassin.jpg',
+    description: 'The reigning price-to-performance champion of CPU air cooling. Features dual aluminum fin stacks, 6x 6mm sintered copper heat pipes, and dual TL-C12C 120mm PWM fans.',
+    keySpecs: { Type: 'Dual-Tower Air', Fans: '2x 120mm PWM', Height: '155mm', Sockets: 'AM4/AM5/LGA1700' },
+    specs: {
+      'Type': 'Dual-Tower Air Cooler',
+      'Heatpipes': '6x 6mm AGHP Copper',
+      'Fan Specs': '2x 120mm PWM, 1550 RPM max',
+      'Cooler Height': '155 mm',
+      'Compatibility': 'AM4, AM5, LGA1700, LGA1200'
+    }
+  },
+  {
+    id: 'gpu-rtx4060-asus',
+    sku: 'ASUS-DUAL-RTX4060-O8G-EVO',
+    brand: 'ASUS',
+    name: 'Dual GeForce RTX 4060 EVO OC Edition 8GB',
+    category: 'GPU',
+    priceINR: 29800,
+    priceUSD: 311,
+    stock: 30,
+    rating: 4.8,
+    reviewsCount: 310,
+    image: '/images/gpu-rtx4060-asus.jpg',
+    description: 'Highly efficient compact graphics card powered by Ada Lovelace architecture with DLSS 3 Frame Generation, dual Axial-tech fans, 2.5-slot design, and ultra-low 115W power draw.',
+    keySpecs: { VRAM: '8GB GDDR6', Boost: '2535 MHz', Power: '115W', Length: '227mm' },
+    specs: {
+      'CUDA Cores': '3072',
+      'Memory Size': '8GB GDDR6',
+      'Memory Bus': '128-bit',
+      'Power Consumption': '115W',
+      'Card Length': '227 mm',
+      'Recommended PSU': '550W'
+    }
+  },
+  {
+    id: 'mb-b650e-i-strix',
+    sku: 'ASUS-ROG-STRIX-B650E-I',
+    brand: 'ASUS',
+    name: 'ROG Strix B650E-I Gaming WiFi Mini-ITX',
+    category: 'Motherboard',
+    priceINR: 29900,
+    priceUSD: 313,
+    stock: 12,
+    rating: 4.9,
+    reviewsCount: 142,
+    image: '/images/mb-b650e-i-strix.jpg',
+    description: 'Ultra-compact Mini-ITX motherboard packing flagship-grade 10+2 power stages, PCIe 5.0 x16 graphics slot, two M.2 slots with active cooling, and Wi-Fi 6E in a 17x17cm footprint.',
+    keySpecs: { Socket: 'AM5', Memory: 'DDR5', Form: 'Mini-ITX', VRM: '10+2 Stages' },
+    specs: {
+      'Socket': 'AM5',
+      'Chipset': 'AMD B650E',
+      'Form Factor': 'Mini-ITX',
+      'Memory Support': 'DDR5 up to 6400+(OC), 2x DIMM',
+      'Memory Type': 'DDR5',
+      'PCIe Slot': '1x PCIe 5.0 x16',
+      'M.2 Slots': '2x M.2 (1x PCIe 5.0, 1x PCIe 4.0)',
+      'Networking': 'Intel 2.5G LAN + Wi-Fi 6E'
+    }
+  },
+  {
+    id: 'case-nr200p',
+    sku: 'CM-MCB-NR200P-WCNN-S00',
+    brand: 'Cooler Master',
+    name: 'MasterBox NR200P V2 Mini-ITX SFF Case',
+    category: 'Cases',
+    priceINR: 8800,
+    priceUSD: 92,
+    stock: 20,
+    rating: 4.9,
+    reviewsCount: 340,
+    image: '/images/case-nr200p.jpg',
+    description: 'Iconic 18.2-liter small form factor case optimized for maximum hardware compatibility. Supports 3-slot vertical GPUs up to 356mm, 280mm liquid coolers, and SFX power supplies.',
+    keySpecs: { Form: 'Mini-ITX SFF', Volume: '18.2L', MaxGPU: '356mm', PSUType: 'SFX' },
+    specs: {
+      'Form Factor': 'Mini-ITX Small Form Factor',
+      'Volume': '18.2 Liters',
+      'Dimensions': '372 x 185 x 292 mm',
+      'Motherboard Support': 'Mini-ITX',
+      'Max GPU Length': '356 mm (Vertical 3-Slot)',
+      'Max CPU Cooler Height': '67 mm (Vertical GPU)',
+      'PSU Compatibility': 'SFX / SFX-L'
+    }
+  },
+  {
+    id: 'cool-axp90',
+    sku: 'TR-AXP90-X47-FC',
+    brand: 'Thermalright',
+    name: 'AXP90-X47 Full Copper Low-Profile Cooler',
+    category: 'Cooling',
+    priceINR: 3850,
+    priceUSD: 40,
+    stock: 24,
+    rating: 4.8,
+    reviewsCount: 195,
+    image: '/images/cool-axp90.jpg',
+    description: 'Ultra low-profile 47mm CPU cooler crafted with pure C1100 copper heatsink fins and 4x 6mm sintered heatpipes, tailored for high thermal performance in compact SFF and Mini-ITX cases.',
+    keySpecs: { Type: 'Low-Profile 47mm', Material: 'Full Copper', Fan: '92mm Slim', Sockets: 'AM4/AM5/LGA1700' },
+    specs: {
+      'Type': 'Low-Profile Air Cooler',
+      'Total Height': '47 mm',
+      'Material': '100% Pure Copper Fins & Heatpipes',
+      'Fan Specs': '92mm Slim PWM, 2700 RPM max',
+      'Compatibility': 'AM4, AM5, LGA1700, LGA1200'
+    }
+  },
+  {
+    id: 'mb-b650-ice',
+    sku: 'GIG-B650-AORUS-ICE',
+    brand: 'Gigabyte',
+    name: 'B650 AORUS Elite AX ICE White Motherboard',
+    category: 'Motherboard',
+    priceINR: 22900,
+    priceUSD: 239,
+    stock: 14,
+    rating: 4.9,
+    reviewsCount: 168,
+    image: '/images/mb-b650-ice.jpg',
+    description: 'Exquisite all-white ATX motherboard engineered with white PCB, silver thermal armor, 12+2+2 digital VRM, DDR5 8000+ support, PCIe 5.0 M.2 slot, and Wi-Fi 6E.',
+    keySpecs: { Socket: 'AM5', Memory: 'DDR5', Form: 'ATX', Theme: 'All-White ICE' },
+    specs: {
+      'Socket': 'AM5',
+      'Chipset': 'AMD B650',
+      'Form Factor': 'ATX',
+      'Color': 'Pure White / Silver Armor',
+      'Memory Support': 'DDR5 up to 8000(OC), 4x DIMM',
+      'Memory Type': 'DDR5',
+      'M.2 Slots': '3x M.2 (1x PCIe 5.0, 2x PCIe 4.0)',
+      'Networking': 'Realtek 2.5G LAN + Wi-Fi 6E'
+    }
+  },
+  {
+    id: 'gpu-rtx4070ti-s-aero',
+    sku: 'GIG-GV-N407TSAERO-OC-16GD',
+    brand: 'Gigabyte',
+    name: 'GeForce RTX 4070 Ti SUPER AERO OC 16GB White',
+    category: 'GPU',
+    priceINR: 86500,
+    priceUSD: 904,
+    stock: 8,
+    rating: 5.0,
+    reviewsCount: 112,
+    image: '/images/gpu-rtx4070ti-s-aero.jpg',
+    description: 'Enchanting white & silver graphics card engineered for ultra-settings 1440p and 4K gaming. Features 16GB GDDR6X, WINDFORCE cooling with alternate spinning fans, and white metal backplate.',
+    keySpecs: { VRAM: '16GB GDDR6X', Boost: '2655 MHz', Power: '285W', Theme: 'Pure White' },
+    specs: {
+      'CUDA Cores': '8448',
+      'Memory Size': '16GB GDDR6X',
+      'Memory Bus': '256-bit',
+      'Power Consumption': '285W',
+      'Card Length': '300 mm',
+      'Color': 'Pure White / Silver',
+      'Recommended PSU': '750W'
+    }
+  }
+];
